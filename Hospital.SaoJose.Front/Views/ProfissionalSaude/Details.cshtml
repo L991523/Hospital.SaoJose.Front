@@ -1,0 +1,33 @@
+﻿@model Hospital.SaoJose.Negocios.ProfissionalSaude
+
+@{
+    ViewBag.Title = "Detalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h4>Detalhes do registro do profissional de saúde</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Formacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Formacao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar este profissional", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Retornar a listagem", "Index")
+</p>

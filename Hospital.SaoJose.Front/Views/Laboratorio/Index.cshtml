@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Hospital.SaoJose.Negocios.Laudo>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataSolicitacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataLiberacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resultado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataSolicitacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataLiberacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resultado)
+        </td>
+
+    </tr>
+}
+
+</table>

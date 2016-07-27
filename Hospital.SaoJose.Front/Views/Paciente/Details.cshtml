@@ -1,0 +1,106 @@
+﻿@model Hospital.SaoJose.Negocios.Paciente
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes do Paciente @Html.DisplayFor(model => model.Nome)</h2>
+
+<div>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cpf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataInternacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataInternacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alergias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alergias)
+        </dd>
+    </dl>
+    <p>
+        <h3>Exames:</h3>
+    </p>
+    <table width="50%">
+        <tr>
+            <th>Nome</th>
+            <th>Data Solicitação</th>
+            <th>Data Liberação</th>
+            <th>Resultado</th>
+        </tr>
+        @foreach (var item in Model.Exames)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataSolicitacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataLiberacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Resultado)
+                </td>
+            </tr>
+        }
+    </table>
+    <p>&nbsp;</p>
+    <p>
+        <h3>Laudos:</h3>
+    </p>
+    <table width="50%">
+        <tr>
+            <th>Nome</th>
+            <th>Data Solicitação</th>
+            <th>Data Liberação</th>
+            <th>Resultado</th>
+        </tr>
+        @foreach (var item in Model.Laudos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataSolicitacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataLiberacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Resultado)
+                </td>
+            </tr>
+        }
+    </table>
+    <p>&nbsp;</p>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Retornar a listagem", "Index")
+</p>

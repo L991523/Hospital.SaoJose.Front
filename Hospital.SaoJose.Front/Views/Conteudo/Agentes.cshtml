@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Agentes e processos automáticos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>Relação de agentes e processos automáticos do sistema</h3>
+<h4>Veja a relação de agentes que implementamos para confirmar a viabilidade técnica da execução de processos batches no sistema.</h4>
+<br />
+<p>
+    <strong>Hospital.SaoJose.Agentes.exe</strong> - Serviço acionado pelo servidor schedule do hospital, composto pelos seguintes métodos:<br />
+    <ul class="nav navbar-nav">
+        <li>RealizaLeituraSensores()</li><br />
+        <li>VerificaLiberacaoExamesLaudos()</li>
+     </ul>
+    <br />
+</p>
+<br />
+<p>
+    <center>
+        <img src="~/Imgs/DiagramaAgente.png" />
+    </center>
+    <br />
+</p>

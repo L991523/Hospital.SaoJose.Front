@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Hospital São José</h1>
+    <p class="lead">Sistema de automação hospitalar</p>
+    <p><h5>Protótipo arquitetural - Trabalho de conclusão do curso de Pós-graduação em Arquitetura de Software Distribuído.</h5></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Interfaces de usuário</h2>
+        <p>
+            Veja a relação de interfaces que implementamos para confirmar a viabilidade técnica de implementação dos CRUDs da aplicação.
+        </p>
+        <p>@Html.ActionLink("+ Veja Mais", "Cruds", "Conteudo")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Interfaces externas</h2>
+        <p>Aqui você encontrará a relação de interfaces e serviços que foram criados para a comunicação do sistema de automação hospitalar com as entidades e serviços externos à aplicação.</p>
+        <p>@Html.ActionLink("+ Veja Mais", "Servicos", "Conteudo")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Agentes e processos batches</h2>
+        <p>Relação de agentes e processos automáticos que auxiliam na execução dos processos de negócio do sistema.</p>
+        <p>@Html.ActionLink("+ Veja Mais", "Agentes", "Conteudo")</p>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@model Hospital.SaoJose.Negocios.ProfissionalSaude
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir o profissional de saúde</h2>
+
+<h3>Você tem certeza que deseja excluir o profissional abaixo?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Formacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Formacao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Confirmar a exclusão" class="btn btn-default" /> |
+            @Html.ActionLink("Retornar a listagem", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Relação de CRUDs da solução";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>Veja a relação de interfaces que implementamos para confirmar a viabilidade técnica de implementação dos CRUDs da aplicação.</h3>
+
+<p>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Gestão dos Profissionais", "Index", "ProfissionalSaude")</li>
+            <li>@Html.ActionLink("Gestão dos Pacientes", "Index", "Paciente")</li>
+        </ul>
+    </div>
+</p>

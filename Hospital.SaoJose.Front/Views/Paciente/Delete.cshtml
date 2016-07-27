@@ -1,0 +1,54 @@
+﻿@model Hospital.SaoJose.Negocios.Paciente
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir o paciente</h2>
+
+<h3>Você tem certeza que deseja excluir o paciente abaixo?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cpf)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataInternacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataInternacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alergias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alergias)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Confirmar a exclusão" class="btn btn-default" /> |
+            @Html.ActionLink("Retornar a listagem", "Index")
+        </div>
+    }
+</div>
